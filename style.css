@@ -1,0 +1,66 @@
+.game-frame {
+    width: 15.875cm;
+    height: 5.29166cm;
+    border: 1px solid black;
+    border-width: medium;
+    background-image: url(img/background.png);
+    margin: auto;
+}
+
+#bird {
+    width: 50px;
+    height: 50px;
+    background-image: url(img/bird.jpg);
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+}
+
+.jump {
+    animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 190px;
+    }
+    30% {
+        top: 130px;
+    }
+    50% {
+        top: 80px;
+    }
+    80% {
+        top: 130px;
+    }
+    100% {
+        top: 190px;
+    }
+}
+
+#crash {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 110px;
+    left: 561px;
+    background-image: url(img/crash.png);
+    background-size: 35px 35px;
+    animation: avoid 1s infinite linear;
+}
+
+@keyframes avoid {
+    0% {
+        left: 561px;
+        display: block;
+    }
+
+    100% {
+        left: -0px;
+        opacity:1; 
+    }
+}
+
+h1 {
+    text-align: center;
+}
