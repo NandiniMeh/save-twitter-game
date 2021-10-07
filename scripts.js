@@ -9,6 +9,11 @@ function jump() {
     }
 }
  
+function play() {
+    var audio = new Audio("jump.wav");
+    audio.play();
+}
+
 let collision = setInterval(function () {
     let crashLeft = parseInt(
         window.getComputedStyle(crash).getPropertyValue("left")
@@ -20,5 +25,6 @@ let collision = setInterval(function () {
   }, 11);
 
 document.addEventListener("keydown", function (event) {
+    play();
     jump();
 });
